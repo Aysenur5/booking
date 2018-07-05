@@ -28,7 +28,7 @@ public class Musteri {
               inverseJoinColumns = {@JoinColumn(name="odaId",referencedColumnName = "odaId")})
     @ManyToMany(fetch = FetchType.EAGER)
     List<Oda> odaListesi;
-///////
+////////
     @OneToMany(mappedBy = "musteriListesi")
     List<Odeme> odemeListesi;
 
