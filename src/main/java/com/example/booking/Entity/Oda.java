@@ -17,7 +17,7 @@ public class Oda {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long odaId;
-    String odaIsmı;
+    String odaIsmi;
     String odaDurumu;
     int odaNo;
     String odaTuru;

@@ -39,7 +39,7 @@ public class OdaService {
     {
         Oda oda=findOdaId(odaId);
 
-        oda.setOdaIsmı(yeniOda.getOdaIsmı());
+        oda.setOdaIsmi(yeniOda.getOdaIsmi());
         oda.setOdaDurumu(yeniOda.getOdaDurumu());
         oda.setOdaNo(yeniOda.getOdaNo());
         oda.setOdaTuru(yeniOda.getOdaTuru());
