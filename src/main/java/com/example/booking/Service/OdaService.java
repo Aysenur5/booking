@@ -27,7 +27,7 @@ public class OdaService {
     public Oda findOdaId (Long odaId)
     {
 //        null check
-        return  odaRepository.findOdasByOdaId(odaId);
+        return  odaRepository.findOdaByOdaId(odaId);
     }
     //sil
     public void deleteOdaId(Long odaId)

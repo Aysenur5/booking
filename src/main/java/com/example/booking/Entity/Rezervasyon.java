@@ -1,5 +1,6 @@
 package com.example.booking.Entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,16 +19,17 @@ public class Rezervasyon {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long rezervasyonId;
     String aciklama;
-    Date rezerBasTar;
-    Date rezerBitTar;
+    String rezerBasTar;
+    String rezerBitTar;
 
-    @ManyToOne
-       @JoinColumn(name = "musteriListesi")
-    Musteri musteriListesi;
 
+//    @ManyToOne
+//    Musteri musteriListesi;
+
+
+    @JsonBackReference
     @ManyToMany(mappedBy = "rezervasyonListesi")
-    List<Oda> odaListesi;
-
+    List<Oda> oda;
 
 
 

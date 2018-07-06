@@ -1,11 +1,13 @@
 package com.example.booking.Entity;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,11 +18,13 @@ public class Odeme {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long odemeId;
+
     String odemeTuru;
 
-    @ManyToOne
-    @JoinColumn(name = "musteriListesi")
-    Musteri musteriListesi;
+
+    @JsonBackReference
+    @ManyToMany(mappedBy = "odemeListesi")
+    List<Musteri> musteriListesi;
 
 
 }

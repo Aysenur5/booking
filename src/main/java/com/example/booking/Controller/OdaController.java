@@ -24,7 +24,8 @@ public class OdaController {
         return odaService.getOdaAll();
     }
 
-    @RequestMapping(path = "/saveOda", method = RequestMethod.POST,consumes = "application/json")
+//    ,consumes = "application/json"
+    @RequestMapping(path = "/saveOda", method = RequestMethod.POST, consumes = "application/json")
     public @ResponseBody
     HttpStatus saveOda(@RequestBody Oda oda)
     {
@@ -34,7 +35,7 @@ public class OdaController {
         }
         catch (Exception e)
         {
-
+            return HttpStatus.BAD_REQUEST;
         }
         return  HttpStatus.OK;
     }

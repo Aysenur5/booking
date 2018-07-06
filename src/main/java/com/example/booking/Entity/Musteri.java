@@ -1,6 +1,7 @@
 package com.example.booking.Entity;
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,17 +24,18 @@ public class Musteri {
     char cinsiyet;
     int telefonno;
 
-    @JoinTable(name = "Musteri_Oda",
-              joinColumns = {@JoinColumn(name = "musteriId",referencedColumnName = "musteriId")},
-              inverseJoinColumns = {@JoinColumn(name="odaId",referencedColumnName = "odaId")})
-    @ManyToMany(fetch = FetchType.EAGER)
+
+
+    @ManyToMany
     List<Oda> odaListesi;
 
-    @OneToMany(mappedBy = "musteriListesi")
-    List<Odeme> odemeListesi;
+   // @JsonBackReference
+    @ManyToMany
+      List<Odeme> odemeListesi;
 
-    @OneToMany(mappedBy = "musteriListesi")
-    List <Rezervasyon> rezervasyonListesi;
+//  //  @JsonBackReference
+//    @OneToMany(mappedBy = "musteriListesi")
+//    List <Rezervasyon> rezervasyonListesi;
 
 
 

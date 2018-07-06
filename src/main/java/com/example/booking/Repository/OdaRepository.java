@@ -13,7 +13,7 @@ public interface OdaRepository extends CrudRepository<Oda,Long> {
 
     List<Oda> findAll();
 
-    Oda findOdasByOdaId(@Param("odaId") Long odaId);
+    Oda findOdaByOdaId(@Param("odaId") Long odaId);
 
 
 
