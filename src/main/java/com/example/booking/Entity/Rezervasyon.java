@@ -23,8 +23,9 @@ public class Rezervasyon {
     String rezerBitTar;
 
 
+//    //@JsonBackReference
 //    @ManyToOne
-//    Musteri musteriListesi;
+//    Musteri musteri;
 
 
     @JsonBackReference

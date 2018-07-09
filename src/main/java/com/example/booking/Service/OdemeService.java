@@ -37,11 +37,7 @@ public class OdemeService {
     public void updateOdemeId(Long odemeId,Odeme yeniOdeme)
     {
         Odeme odeme=findOdemeId(odemeId);
-
-        odeme.setOdemeTuru(yeniOdeme.getOdemeTuru());
-
-
-        setOdeme(odeme);
+        setOdeme(yeniOdeme);
 
     }
 

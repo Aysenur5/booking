@@ -38,15 +38,7 @@ public class OdaService {
     public void updateOdaId(Long odaId,Oda yeniOda)
     {
         Oda oda=findOdaId(odaId);
-
-        oda.setOdaIsmi(yeniOda.getOdaIsmi());
-        oda.setOdaDurumu(yeniOda.getOdaDurumu());
-        oda.setOdaNo(yeniOda.getOdaNo());
-        oda.setOdaTuru(yeniOda.getOdaTuru());
-        oda.setGirisTarihi(yeniOda.getGirisTarihi());
-        oda.setCikisTarihi(yeniOda.getCikisTarihi());
-
-        setOda(oda);
+        setOda(yeniOda);
 
     }
 

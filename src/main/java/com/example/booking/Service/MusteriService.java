@@ -38,13 +38,9 @@ public class MusteriService {
     {
         Musteri musteri=findMusteriId(musteriId);
 
-        musteri.setTc(yeniMusteri.getTc());
-        musteri.setAdi(yeniMusteri.getAdi());
-        musteri.setSoyadi(yeniMusteri.getSoyadi());
-        musteri.setCinsiyet(yeniMusteri.getCinsiyet());
-        musteri.setTelefonno(yeniMusteri.getTelefonno());
 
-        setMusteri(musteri);
+
+        setMusteri(yeniMusteri);
 
     }
 

@@ -33,8 +33,8 @@ public class Musteri {
     @ManyToMany
       List<Odeme> odemeListesi;
 
-//  //  @JsonBackReference
-//    @OneToMany(mappedBy = "musteriListesi")
+//    @JsonBackReference
+//    @OneToMany(mappedBy = "musteri")
 //    List <Rezervasyon> rezervasyonListesi;
 
 

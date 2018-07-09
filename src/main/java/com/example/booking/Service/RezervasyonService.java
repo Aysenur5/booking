@@ -38,12 +38,7 @@ public class RezervasyonService {
     {
         Rezervasyon rezervasyon=findRezervasyonId(rezervasyonId);
 
-        rezervasyon.setAciklama(yeniRezervasyon.getAciklama());
-        rezervasyon.setRezerBasTar(yeniRezervasyon.getRezerBasTar());
-        rezervasyon.setRezerBitTar(yeniRezervasyon.getRezerBitTar());
-
-
-        setRezervasyon(rezervasyon);
+        setRezervasyon(yeniRezervasyon);
 
     }
 
