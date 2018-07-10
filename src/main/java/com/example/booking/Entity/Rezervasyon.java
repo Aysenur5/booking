@@ -27,7 +27,7 @@ public class Rezervasyon {
 //    @ManyToOne
 //    Musteri musteri;
 
-
+//
     @JsonBackReference
     @ManyToMany(mappedBy = "rezervasyonListesi")
     List<Oda> oda;
