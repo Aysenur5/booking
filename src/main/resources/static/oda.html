@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="angular/angular-1.7.2/angular.min.js"></script>
+<script src="/oda.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div ng-init="pageOpen ()" ng-app="BookingApplication" ng-controller="OdaController">
+    <form>
+       <table >
+           <thead>
+           <tr>
+               <th>Oda Adı </th>
+               <th>Oda Türü </th>
+           </tr>
+           </thead>
+           <tbody>
+           <tr  ng-repeat="oda in odaList">
+
+               <td>{{oda.odaIsmi}}</td>
+               <td>{{oda.odaTuru}}</td>
+
+           </tr>
+           </tbody>
+       </table>
+
+    </form>
+
+
+
+</div>
+
+</body>
+</html>
