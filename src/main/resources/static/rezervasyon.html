@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="angular/angular-1.7.2/angular.min.js"></script>
+<script src="/rezervasyon.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<style>-->
+    <!--table {-->
+    <!--font-family: arial, sans-serif;-->
+    <!--border-collapse: collapse;-->
+    <!--width: 100%;-->
+    <!--}-->
+
+    <!--td, th {-->
+    <!--border: 1px solid #dddddd;-->
+    <!--text-align: left;-->
+    <!--padding: 8px;-->
+    <!--}-->
+
+    <!--tr:nth-child(even) {-->
+    <!--background-color: #dddddd;-->
+    <!--}-->
+    <!--</style>-->
+
+
+</head>
+<body>
+<div ng-init="pageOpen ()" ng-app="BookingApplication" ng-controller="RezervasyonController"  >
+    <div class="container">
+
+        <h2>REZERVASYON</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Check-in Tarihi</th>
+                <th>Check-out Tarih</th>
+                <th>Açıklama </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr  ng-repeat="rezervasyon in rezervasyonList">
+                <td>{{rezervasyon.rezerBasTar}}</td>
+                <td>{{rezervasyon.rezerBitTar}}</td>
+                <td>{{rezervasyon.aciklama}}</td>
+                <td><button type="button" class="btn btn-default" ng-click="selectRezervasyon(rezervasyon)">Güncelle</button></td>
+                <button type="button" class="btn btn-primary">Sil</button>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

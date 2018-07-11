@@ -7,34 +7,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <!--<style>-->
+        <!--table {-->
+            <!--font-family: arial, sans-serif;-->
+            <!--border-collapse: collapse;-->
+            <!--width: 100%;-->
+        <!--}-->
+
+        <!--td, th {-->
+            <!--border: 1px solid #dddddd;-->
+            <!--text-align: left;-->
+            <!--padding: 8px;-->
+        <!--}-->
+
+        <!--tr:nth-child(even) {-->
+            <!--background-color: #dddddd;-->
+        <!--}-->
+    <!--</style>-->
+
+
 </head>
 <body>
 
 
 <div ng-init="pageOpen ()" ng-app="BookingApplication" ng-controller="OdaController">
-    <form>
-       <table >
-           <thead>
-           <tr>
-               <th>Oda Adı </th>
-               <th>Oda Türü </th>
-           </tr>
-           </thead>
-           <tbody>
-           <tr  ng-repeat="oda in odaList">
 
-               <td>{{oda.odaIsmi}}</td>
-               <td>{{oda.odaTuru}}</td>
+    <div class="container">
+        <h2>ODA</h2>
 
-           </tr>
-           </tbody>
-       </table>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Oda No</th>
+                <th>Oda İsmi</th>
+                <th>Oda Türü </th>
+                <th>Oda Durumu </th>
 
-    </form>
+            </tr>
+            </thead>
+            <tbody>
+                 <tr  ng-repeat="oda in odaList">
 
+                    <td>{{oda.odaNo}}</td>
+                     <td>{{oda.odaIsmi}}</td>
+                     <td>{{oda.odaTuru}}</td>
+                     <td>{{oda.odaDurumu}}</td>
+                     <td>  <button type="button" class="btn btn-info"  ng-click="selectOda(oda)"  >Seç</button></td>
+
+                 </tr>
+            </tbody>
+        </table>
+        <div class="form-group">
+            <label for="tc">TC</label>
+            <input type="text" class="form-control" id="tc" ng-model="musteri.tc" placeholder="TC">
+        </div>
+        <div class="form-group">
+            <label for="musteriIsmi">Adı</label>
+            <input type="text" class="form-control" id="musteriIsmi" ng-model="musteri.adi" placeholder="İsim">
+        </div>
+        <div class="form-group">
+            <label for="musteriSoyadi"> Soyadı</label>
+            <input type="text" class="form-control" id="musteriSoyadi" ng-model="musteri.soyadi" placeholder="Soyad">
+        </div>
+        <div class="form-group">
+            <label for="musteriCinsiyet">Cinsiyet</label>
+            <input type="text" class="form-control" id="musteriCinsiyet" ng-model="musteri.cinsiyet" placeholder="Cinsiyet">
+        </div>
+        <div class="form-group">
+            <label for="musteritelno">Telefon Numarası</label>
+            <input type="text" class="form-control" id="musteritelno" ng-model="musteri.telefonno" placeholder="Telefon Numarası">
+        </div>
+        <button type="button" class="btn btn-info"  ng-click="save()" >Kaydet</button>
+
+    </div>
 
 
 </div>
+
 
 </body>
 </html>
