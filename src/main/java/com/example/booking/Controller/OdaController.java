@@ -48,17 +48,17 @@ public class OdaController {
         return odaService.findOdaId(odaId);
     }
 
-    @RequestMapping(path = "/deleteOdaId/{odaId}",method = RequestMethod.DELETE)
+    @RequestMapping(path = "/deleteOda",method = RequestMethod.POST)
     public @ResponseBody
-    HttpStatus  deleteOdaId (@PathVariable Long odaId)
+    HttpStatus  deleteOda (@RequestBody Oda oda)
     {
         try
         {
-            odaService.deleteOdaId(odaId);
+            odaService.deleteOda(oda);
         }
         catch (Exception e)
         {
-
+           return HttpStatus.BAD_REQUEST;
         }
         return  HttpStatus.OK;
 

@@ -55,31 +55,29 @@
                      <td>{{oda.odaIsmi}}</td>
                      <td>{{oda.odaTuru}}</td>
                      <td>{{oda.odaDurumu}}</td>
-                     <td>  <button type="button" class="btn btn-info"  ng-click="selectOda(oda)"  >Seç</button></td>
+                     <td>  <button type="button" class="btn btn-info"  ng-click="selectOda(oda)" >Güncelle</button></td>
+                     <td>  <button type="button" class="btn btn-info"  ng-click="deleteOda(oda)" >Sil</button></td>
 
                  </tr>
             </tbody>
         </table>
         <div class="form-group">
-            <label for="tc">TC</label>
-            <input type="text" class="form-control" id="tc" ng-model="musteri.tc" placeholder="TC">
+            <label for="odaNo"> Oda Numarası</label>
+            <input type="text" class="form-control" id="odaNo" ng-model="oda.odaNo" placeholder="Oda Numarası">
         </div>
         <div class="form-group">
-            <label for="musteriIsmi">Adı</label>
-            <input type="text" class="form-control" id="musteriIsmi" ng-model="musteri.adi" placeholder="İsim">
+            <label for="odaIsmi">Oda Adı</label>
+            <input type="text" class="form-control" id="odaIsmi" ng-model="oda.odaIsmi" placeholder="Oda İsmi">
         </div>
         <div class="form-group">
-            <label for="musteriSoyadi"> Soyadı</label>
-            <input type="text" class="form-control" id="musteriSoyadi" ng-model="musteri.soyadi" placeholder="Soyad">
+            <label for="odaDurumu">Oda Durumu</label>
+            <input type="text" class="form-control" id="odaDurumu" ng-model="oda.odaDurumu" placeholder="Oda Durumu">
         </div>
         <div class="form-group">
-            <label for="musteriCinsiyet">Cinsiyet</label>
-            <input type="text" class="form-control" id="musteriCinsiyet" ng-model="musteri.cinsiyet" placeholder="Cinsiyet">
+            <label for="odaTuru">Oda Türü</label>
+            <input type="text" class="form-control" id="odaTuru" ng-model="oda.odaTuru" placeholder="Oda Turu">
         </div>
-        <div class="form-group">
-            <label for="musteritelno">Telefon Numarası</label>
-            <input type="text" class="form-control" id="musteritelno" ng-model="musteri.telefonno" placeholder="Telefon Numarası">
-        </div>
+
         <button type="button" class="btn btn-info"  ng-click="save()" >Kaydet</button>
 
     </div>

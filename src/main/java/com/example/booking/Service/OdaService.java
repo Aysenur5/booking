@@ -30,9 +30,9 @@ public class OdaService {
         return  odaRepository.findOdaByOdaId(odaId);
     }
     //sil
-    public void deleteOdaId(Long odaId)
+    public void deleteOda(Oda oda)
     {
-        odaRepository.delete(odaId);
+        odaRepository.delete(oda);
     }
     //güncelleme
     public void updateOdaId(Long odaId,Oda yeniOda)

@@ -16,14 +16,22 @@ var myApp=angular.module('BookingApplication',[]).controller('OdaController',fun
 
     }
     $scope.save=function () {
-        var x=$http.post('api/oda/saveOda', $scope.player);
+        var x=$http.post('api/oda/saveOda', $scope.oda);
         x.then(function (response) {
-            alert=response.data;
+            alert(response.data);
             $scope.findOdaList();
         });
     }
     $scope.selectOda=function (oda) {
         $scope.oda=oda;
+    }
+    $scope.deleteOda=function (oda) {
+        $scope.oda=oda;
+        var x=$http.post('/api/oda/deleteOda', $scope.oda);
+        x.then(function (response) {
+            $scope.oda={};
+            $scope.findOdaList();
+        });
     }
 
 });
