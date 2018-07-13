@@ -2,6 +2,8 @@ var myApp=angular.module('BookingApplication',[]).controller('OdaController',fun
 
     $scope.oda={}
     $scope.odaList=[];
+    $scope.musteri={}
+    $scope.musteriList=[];
 
     $scope.pageOpen=function () {
         $scope.findOdaList();
@@ -22,6 +24,13 @@ var myApp=angular.module('BookingApplication',[]).controller('OdaController',fun
             $scope.findOdaList();
         });
     }
+    // $scope.saveMusteri=function () {
+    //     var x=$http.post('api/musteri/saveMusteri', $scope.musteri);
+    //     x.then(function (response) {
+    //         alert(response.data);
+    //         $scope.findOdaList();
+    //     });
+    // }
     $scope.selectOda=function (oda) {
         $scope.oda=oda;
     }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="angular/angular-1.7.2/angular.min.js"></script>
+<script src="/musteri.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div ng-init="pageOpen()" ng-app="BookingApplication" ng-controller="MusteriController">
+
+    <div class="container">
+        <div class="form-group">
+            <label>ODA</label>
+            <select ng-model="oda" ng-options="oda as oda.odaIsmi for oda in odaList"></select>
+        </div>
+
+        <label for="musteri">Musteri</label>
+        <div class="form-group">
+            <input type="text" class="form-control" id="musteri" ng-model="oda.musteri.adi" placeholder="Musteri">
+        </div>
+        <button type="button" class="btn btn-info"  ng-click="save()" >Kaydet</button>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Oda No</th>
+                <th>Oda İsmi</th>
+                <th>Oda Türü </th>
+                <th>Oda Durumu </th>
+                <th>Müşteri </th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr  ng-repeat="oda in odaList">
+
+                <td>{{oda.odaNo}}</td>
+                <td>{{oda.odaIsmi}}</td>
+                <td>{{oda.odaTuru}}</td>
+                <td>{{oda.odaDurumu}}</td>
+                <td>{{oda.musteri.adi}}</li></td>
+                <td>  <button type="button" class="btn btn-info"  ng-click="selectOda(oda)" >Güncelle</button></td>
+                <td>  <button type="button" class="btn btn-info"  ng-click="deleteOda(oda)" >Sil</button></td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

@@ -10,23 +10,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
-    <!--<style>-->
-        <!--table {-->
-            <!--font-family: arial, sans-serif;-->
-            <!--border-collapse: collapse;-->
-            <!--width: 100%;-->
-        <!--}-->
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-        <!--td, th {-->
-            <!--border: 1px solid #dddddd;-->
-            <!--text-align: left;-->
-            <!--padding: 8px;-->
-        <!--}-->
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
 
-        <!--tr:nth-child(even) {-->
-            <!--background-color: #dddddd;-->
-        <!--}-->
-    <!--</style>-->
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 
 
 </head>
@@ -51,14 +51,15 @@
             <tbody>
                  <tr  ng-repeat="oda in odaList">
 
-                    <td>{{oda.odaNo}}</td>
+                     <td>{{oda.odaNo}}</td>
                      <td>{{oda.odaIsmi}}</td>
                      <td>{{oda.odaTuru}}</td>
                      <td>{{oda.odaDurumu}}</td>
+                     <!--<td><li  ng-repeat="oda as oda.musteriList">{{oda.musteri}}</li></td>-->
                      <td>  <button type="button" class="btn btn-info"  ng-click="selectOda(oda)" >Güncelle</button></td>
                      <td>  <button type="button" class="btn btn-info"  ng-click="deleteOda(oda)" >Sil</button></td>
-
                  </tr>
+
             </tbody>
         </table>
         <div class="form-group">
